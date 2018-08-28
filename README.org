@@ -1,6 +1,0 @@
-Last repo I copied a lot from noteworthy configs.  
-Hope it's a new start to learn elisp programming xD  
-
-** Recent Plan
-*** Package Management Based On Cask
-
