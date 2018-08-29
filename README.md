@@ -1,5 +1,7 @@
 #### Emacs Go! Go! Go!
 
+![](https://github.com/xuuexu/Emacs-Go-Go-Go/blob/master/Emacs-Go-Go-Go.jpg)
+
 I don't know, I created a new emacs repo **again**.
 
 It seems that I cannot be satisfied with my emacs forever (*sad-face*)
