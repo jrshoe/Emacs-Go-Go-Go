@@ -2,6 +2,13 @@
 (setq debug-on-error t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;---------------------------------------------------------------
+;; custom.el
+;; check: package-autoremove
+(package-initialize)
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(unless (file-exists-p custom-file)
+  (write-region "" nil custom-file))
+;;---------------------------------------------------------------
 ;; set your cask.el
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
@@ -30,6 +37,9 @@
 ;; no littering!!!
 (require 'init-no-littering)
 ;;---------------------------------------------------------------
+;; load custom.el
+(when (file-exists-p custom-file)
+  (load custom-file))
 ;;---------------------------------------------------------------
 ;;---------------------------------------------------------------
 ;;---------------------------------------------------------------
@@ -38,6 +48,7 @@
 ;;---------------------------------------------------------------
 
 
+(provide 'init)
 
 
 
