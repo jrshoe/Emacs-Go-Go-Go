@@ -1,6 +1,15 @@
 ;; -*- lexical-binding: t -*-
 (setq debug-on-error t)
 (defalias 'yes-or-no-p 'y-or-n-p)
+;; no beep
+(setq ring-bell-function 'ignore)
+;;---------------------------------------------------------------
+;; Adjust garbage collection thresholds during startup, and thereafter
+(let ((normal-gc-cons-threshold (* 20 1024 1024))
+      (init-gc-cons-threshold (* 128 1024 1024)))
+  (setq gc-cons-threshold init-gc-cons-threshold)
+  (add-hook 'emacs-startup-hook
+            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 ;;---------------------------------------------------------------
 ;; custom.el
 ;; check: package-autoremove
@@ -24,13 +33,6 @@
 ;; easy to load .emacs.d/lisp/init-*.el flie
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 ;;---------------------------------------------------------------
-;; Adjust garbage collection thresholds during startup, and thereafter
-(let ((normal-gc-cons-threshold (* 20 1024 1024))
-      (init-gc-cons-threshold (* 128 1024 1024)))
-  (setq gc-cons-threshold init-gc-cons-threshold)
-  (add-hook 'after-init-hook
-            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
-;;---------------------------------------------------------------
 ;; Set up $PATH
 (require 'init-exec-path) 
 ;;---------------------------------------------------------------
@@ -41,8 +43,14 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 ;;---------------------------------------------------------------
+(require 'init-gui-frames)
+(require 'init-themes)
 ;;---------------------------------------------------------------
+(require 'init-modeline)
 ;;---------------------------------------------------------------
+(require 'init-cc-mode)
+(require 'init-python-mode)
+(require 'init-ruby-mode)
 ;;---------------------------------------------------------------
 ;;---------------------------------------------------------------
 ;;---------------------------------------------------------------
