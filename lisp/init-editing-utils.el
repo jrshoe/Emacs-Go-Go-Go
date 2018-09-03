@@ -54,10 +54,24 @@
 (paradox-require 'symbol-overlay)
 
 (dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook yaml-mode-hook conf-mode-hook))    (add-hook hook 'symbol-overlay-mode))
-  (with-eval-after-load 'symbol-overlay
-    (define-key symbol-overlay-mode-map (kbd "M-i") 'symbol-overlay-put)
-    (define-key symbol-overlay-mode-map (kbd "M-n") 'symbol-overlay-jump-next)
-    (define-key symbol-overlay-mode-map (kbd "M-p") 'symbol-overlay-jump-prev))
+(with-eval-after-load 'symbol-overlay
+  (define-key symbol-overlay-mode-map (kbd "M-i") 'symbol-overlay-put)
+  (define-key symbol-overlay-mode-map (kbd "M-n") 'symbol-overlay-jump-next)
+  (define-key symbol-overlay-mode-map (kbd "M-p") 'symbol-overlay-jump-prev))
+
+
+;;----------------------------------------------------------------------------
+;; M-return
+;;----------------------------------------------------------------------------
+(defun newline-without-break-of-line ()
+  "1. move to end of the line.
+  2. insert newline with index"
+  (interactive)
+  (let ((oldpos (point)))
+    (end-of-line)
+    (newline-and-indent)))
+
+(global-set-key (kbd "<M-return>") 'newline-without-break-of-line)
 
 (provide 'init-editing-utils)
 
