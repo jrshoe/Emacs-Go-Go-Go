@@ -1,4 +1,5 @@
 (paradox-require 'yasnippet)
+(paradox-require 'auto-yasnippet)
 
 (yas-global-mode 1)
 

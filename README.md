@@ -29,9 +29,13 @@ let me give your some code snippets.
 
 #### Module
 
-This configuration has been heavily inspired from pucell's `emacs.d`, it's easy to extend.
+This configuration has been heavily inspired from pucell's `emacs.d`, which is easy to extend.
 
 Check the `init.el` and `lisp/`  and you will know what I'm saying.
+
+### ScreenShot
+
+![](https://github.com/xuuexu/Emacs-Go-Go-Go/blob/master/image/screenshot.png)
 
 ### KeyMap
 
