@@ -1,12 +1,10 @@
-### Emacs Go! Go! Go!
+# Emacs Go! Go! Go!
 
 ![](https://github.com/xuuexu/Emacs-Go-Go-Go/blob/master/image/Emacs-Go-Go-Go.jpg)
 
-I don't know, I created a new emacs repo **again**.
+<center>Emacs Config Never Settle</center>
 
-It seems that I cannot be satisfied with my emacs forever (*sad-face*)
-
-#### Usage
+### Usage
 
 ```shell
 git clone https://github.com/xuuexu/Emacs-Go-Go-Go.git ~/.emacs.d
@@ -14,7 +12,28 @@ cd ~/.emacs.d
 cask install
 ```
 
-#### KeyMap
+### How to use this config?
+
+#### Package Install
+
+This cask use `cask` + `pallet` + `paradox`  to manage package from `elpa` `melpa` or somewhere.  
+
+Edit `Cask` file to change your `source`.
+
+let me give your some code snippets.
+
+```lisp
+(paradox-require 'evil) 
+;; It will load evil if it exists, or it will install it and save it in your Cask file
+```
+
+#### Module
+
+This configuration has been heavily inspired from pucell's `emacs.d`, it's easy to extend.
+
+Check the `init.el` and `lisp/`  and you will know what I'm saying.
+
+### KeyMap
 
 | kbd  |                         Default                         | modified |
 | :--: | :-----------------------------------------------------: | :------: |
