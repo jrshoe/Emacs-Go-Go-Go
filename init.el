@@ -33,6 +33,8 @@
 ;; easy to load .emacs.d/lisp/init-*.el flie
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 ;;---------------------------------------------------------------
+(paradox-require 'dash)
+;;---------------------------------------------------------------
 ;; Set up $PATH
 (require 'init-exec-path) 
 ;;---------------------------------------------------------------
@@ -54,14 +56,20 @@
 (require 'init-ivy)
 ;;---------------------------------------------------------------
 (require 'init-company)
+(require 'init-projectile)
+(require 'init-yasnippet)
+(require 'init-git)
 ;;---------------------------------------------------------------
 (require 'init-modeline)
 ;;---------------------------------------------------------------
 (require 'init-cc-mode)
 (require 'init-python-mode)
 (require 'init-ruby-mode)
+(require 'init-js-mode)
+(require 'init-web-mode)
+(require 'init-org-mode)
 ;;---------------------------------------------------------------
-
+(require 'init-editing-utils)
 ;;---------------------------------------------------------------
 (require 'init-keybindings)
 ;;---------------------------------------------------------------

@@ -1,6 +1,8 @@
 (paradox-require 'tao-theme)
+(paradox-require 'doom-themes)
 
-(load-theme 'tao-yin t)
+(load-theme 'doom-nova t)
+;; (load-theme 'tao-yin t)
 ;; set font
 (set-frame-font "Source Code Pro 14" nil t)
 
