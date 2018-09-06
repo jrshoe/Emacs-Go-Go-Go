@@ -59,8 +59,7 @@
 (require 'init-projectile)
 (require 'init-yasnippet)
 (require 'init-git)
-;;---------------------------------------------------------------
-(require 'init-modeline)
+(require 'init-rg)
 ;;---------------------------------------------------------------
 (require 'init-cc-mode)
 (require 'init-python-mode)
@@ -73,7 +72,9 @@
 ;;---------------------------------------------------------------
 (require 'init-keybindings)
 ;;---------------------------------------------------------------
-
+;; diminish mode
+;; put it to the bottom
+(require 'init-modeline)
 
 (provide 'init)
 

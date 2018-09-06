@@ -2,7 +2,7 @@
 
 ![](https://github.com/xuuexu/Emacs-Go-Go-Go/blob/master/image/Emacs-Go-Go-Go.jpg)
 
-<center>Emacs Config Never Settle</center>
+**Who are you?   I'm Emacs Hacker**
 
 ### Usage
 

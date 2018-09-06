@@ -21,6 +21,7 @@
 
 (global-set-key (kbd "C-x r b") 'counsel-bookmark)
 
+(global-set-key (kbd "C-x b") 'counsel-ibuffer)
 
 
 (provide 'init-keybindings)

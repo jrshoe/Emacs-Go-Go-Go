@@ -3,7 +3,6 @@
 (when (eval-when-compile (version< "24.4" emacs-version))
   (add-hook 'after-init-hook 'electric-indent-mode))
 
-
 (paradox-require 'list-unicode-display)
 
 ;;----------------------------------------------------------------------------
@@ -22,11 +21,13 @@
 ;;----------------------------------------------------------------------------
 ;; Show matching parens
 ;;----------------------------------------------------------------------------
+
 (add-hook 'after-init-hook 'show-paren-mode)
 
 ;;----------------------------------------------------------------------------
 ;; auto indent a block
 ;;----------------------------------------------------------------------------
+
 (paradox-require 'aggressive-indent)
 (global-aggressive-indent-mode 1)
 
@@ -39,6 +40,7 @@
 ;;----------------------------------------------------------------------------
 ;; some ways to adjust the parens
 ;;----------------------------------------------------------------------------
+
 (paradox-require 'adjust-parens)
 (add-hook 'after-init-hook 'adjust-parens-mode)
 
@@ -53,7 +55,8 @@
 ;;----------------------------------------------------------------------------
 (paradox-require 'symbol-overlay)
 
-(dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook yaml-mode-hook conf-mode-hook))    (add-hook hook 'symbol-overlay-mode))
+(dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook yaml-mode-hook conf-mode-hook))
+  (add-hook hook 'symbol-overlay-mode))
 (with-eval-after-load 'symbol-overlay
   (define-key symbol-overlay-mode-map (kbd "M-i") 'symbol-overlay-put)
   (define-key symbol-overlay-mode-map (kbd "M-n") 'symbol-overlay-jump-next)
@@ -73,7 +76,24 @@
 
 (global-set-key (kbd "<M-return>") 'newline-without-break-of-line)
 
+;;----------------------------------------------------------------------------
+;; Move Text
+;;----------------------------------------------------------------------------
+(paradox-require 'move-text)
+(move-text-default-bindings)
+;;----------------------------------------------------------------------------
+;; Highlight TODO
+;;----------------------------------------------------------------------------
+(paradox-require 'hl-todo)
+(hl-todo-mode)
+
+;;----------------------------------------------------------------------------
+;; pop win
+;;----------------------------------------------------------------------------
+(paradox-require 'popwin)
+(popwin-mode 1)
+
+
+
 (provide 'init-editing-utils)
-
-
 
