@@ -67,6 +67,7 @@
 (require 'init-js-mode)
 (require 'init-web-mode)
 (require 'init-org-mode)
+(require 'init-lua-mode)
 ;;---------------------------------------------------------------
 (require 'init-editing-utils)
 ;;---------------------------------------------------------------
