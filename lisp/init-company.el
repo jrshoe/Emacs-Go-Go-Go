@@ -24,12 +24,18 @@
 (setq company-idle-delay 0)
 (setq company-minimum-prefix-length 3)
 
+;; I like C-n C-p
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
+  (define-key company-active-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1))))
 
 ;; set up posframe
 (company-posframe-mode 1)
 
 (when (featurep 'robe)
   (add-to-list 'company-backends 'company-robe))
+
+
 
 
 
