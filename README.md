@@ -1,8 +1,12 @@
-# Emacs Go! Go! Go!
+<h3 align="center">Emacs Go Go Go !</h3>
 
 ![](https://github.com/xuuexu/Emacs-Go-Go-Go/blob/master/image/Emacs-Go-Go-Go.jpg)
 
-**Who are you?   I'm Emacs Hacker**
+<p align="center">
+Whooooo are you?
+</br>
+*Batman tone*   I'm Emacs Hacker😎😎😎
+</p>
 
 ### Usage
 
@@ -17,8 +21,6 @@ cask install
 #### Package Install
 
 This cask use `cask` + `pallet` + `paradox`  to manage package from `elpa` `melpa` or somewhere.  
-
-Edit `Cask` file to change your `source`.
 
 let me give your some code snippets.
 
@@ -47,7 +49,5 @@ defaults write org.gnu.Emacs Emacs.ScrollBar -string no
 defaults write org.gnu.Emacs Emacs.MenuBar -string no
 ```
 
-2. 
-
-
+2. Edit `Cask` file to change your mirror `source`.
 
