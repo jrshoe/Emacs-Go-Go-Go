@@ -4,6 +4,9 @@
 ;; useful pkg
 ;; Live Coding in Python
 (paradox-require 'live-py-mode)
+;; personal config
+;; must be absolute path
+(add-hook 'live-py-mode-hook (lambda () (setq live-py-version  "/usr/local/bin/python3") (live-py-update-all)))
 
 ;; format python code on save
 (paradox-require 'py-autopep8)
