@@ -30,8 +30,11 @@
 (require 'paradox)
 (paradox-enable)
 ;;---------------------------------------------------------------
-;; easy to load .emacs.d/lisp/init-*.el flie
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+;; easy to load .emacs.d/lisp/*/init-*.el flie
+(add-to-list 'load-path (expand-file-name "lisp/vanilla" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/major" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/minor" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/utils" user-emacs-directory))
 ;;---------------------------------------------------------------
 (paradox-require 'dash)
 ;;---------------------------------------------------------------
